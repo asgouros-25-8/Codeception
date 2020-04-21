@@ -5,7 +5,6 @@ use Codeception\TestInterface;
 use Codeception\Util\ReflectionHelper;
 use SebastianBergmann\Timer\Timer;
 use Codeception\PHPUnit\Test as TestAbstract;
-use PHPUnit\Framework\TestResult;
 
 /**
  * The most simple testcase (with only one test in it) which can be executed by PHPUnit/Codeception.
@@ -59,7 +58,7 @@ abstract class Test extends TestAbstract implements TestInterface
      * @param  \PHPUnit\Framework\TestResult $result
      * @return \PHPUnit\Framework\TestResult
      */
-    final public function run(\PHPUnit\Framework\TestResult $result = null): TestResult
+    final public function _run(\PHPUnit\Framework\TestResult $result = null)
     {
         $this->testResult = $result;
 
