@@ -4,6 +4,7 @@ namespace Codeception\Test;
 use Codeception\TestInterface;
 use Codeception\Util\ReflectionHelper;
 use SebastianBergmann\Timer\Timer;
+use Codeception\PHPUnit\Test as TestAbstract;
 
 /**
  * The most simple testcase (with only one test in it) which can be executed by PHPUnit/Codeception.
@@ -15,7 +16,7 @@ use SebastianBergmann\Timer\Timer;
  *
  * Inherited class must implement `test` method.
  */
-abstract class Test implements TestInterface, Interfaces\Descriptive
+abstract class Test extends TestAbstract implements TestInterface
 {
     use Feature\AssertionCounter;
     use Feature\CodeCoverage;
@@ -49,13 +50,6 @@ abstract class Test implements TestInterface, Interfaces\Descriptive
      * @return mixed
      */
     abstract public function test();
-
-    /**
-     * Test representation
-     *
-     * @return mixed
-     */
-    abstract public function toString();
 
     /**
      * Runs a test and collects its result in a TestResult instance.

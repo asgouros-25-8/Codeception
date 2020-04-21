@@ -31,7 +31,7 @@
         "symfony/css-selector": ">=2.7 <5.0",
         "symfony/dom-crawler": ">=2.7 <5.0",
         "behat/gherkin": "^4.4.0",
-        "codeception/phpunit-wrapper": ">6.0.15 <6.1.0 | ^6.6.1 | ^7.7.1 | ^8.0.3",
+        "codeception/phpunit-wrapper": "dev-8.0-abstract-test as 8.1.2",
         "codeception/stub": "^2.0 | ^3.0"
     },
     "require-dev": {
